@@ -162,6 +162,7 @@ namespace MenuSystem
             var output = "";
             foreach (char ch in input)
                 output += encrypt ? (char) (ch + key) : (char) (ch - key);
+            Console.Clear();
             Console.WriteLine(output);
         }
 
@@ -192,7 +193,7 @@ namespace MenuSystem
                 }
                 else resultOutput += input[i];
             }
-
+            Console.Clear();
             Console.WriteLine(resultOutput);
         }
 

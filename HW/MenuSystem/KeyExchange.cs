@@ -4,15 +4,15 @@ namespace MenuSystem
 {
     public class KeyExchange
     {
-        private int pKeyFirst;
-        private int pKeySecond;
-        private int pSecretFirst;
-        private int pSecretSecond;
+        private ulong pKeyFirst;
+        private ulong pKeySecond;
+        private ulong pSecretFirst;
+        private ulong pSecretSecond;
         
 
-        static int keyValidation()
+        static ulong keyValidation()
         {
-            var tKey = 0;
+            ulong tKey = 0;
             var inputKey = "";
             bool wrongInput = false;
             do
@@ -20,17 +20,17 @@ namespace MenuSystem
                 if (wrongInput)
                     Console.WriteLine("Try again");
                 inputKey = Console.ReadLine();
-                if (Int32.TryParse(inputKey, out tKey))
+                if (ulong.TryParse(inputKey, out tKey))
                     wrongInput = primesValidation(tKey);
             } while (wrongInput);
             return tKey;
         }
 
-        static bool primesValidation(int inputKey)
+        static bool primesValidation(ulong inputKey)
         {
             if (inputKey < 2)
                 return true;
-            for (int i = inputKey/2; i > 1; i--)
+            for (ulong i = inputKey/2; i > 1; i--)
             {
                 if (inputKey % i == 0)
                     return true;
@@ -38,16 +38,15 @@ namespace MenuSystem
             return false;
         }
         
-        static int keyGenerator(int publicKeyA, int secretPart, int publicKeyB)
+        static ulong keyGenerator(ulong publicKeyA, ulong secretPart, ulong publicKeyB)
         {
             
-            int powerOfKeyValue = 1;
-            int remainingPart = publicKeyA % publicKeyB;
-
-            for (int i = secretPart - 1; i >= 0; i--)
+            ulong powerOfKeyValue = 1;
+            ulong remainingPart = publicKeyA % publicKeyB;
+            for (ulong i = secretPart; i > 0; i--)
             {
-
-                if (powerOfKeyValue < publicKeyB && i != secretPart - 1)
+                
+                if (powerOfKeyValue < publicKeyB && i != secretPart)
                 {
                     powerOfKeyValue = powerOfKeyValue * publicKeyA;
                     if (powerOfKeyValue > publicKeyB)
@@ -66,45 +65,44 @@ namespace MenuSystem
 
             return powerOfKeyValue;
         }
-        
+
         public void keyExchange()
         {
-            var con = "";
-            do
+            Console.WriteLine("Input first public key (has to be a prime number)");
+            pKeyFirst = keyValidation();
+            Console.WriteLine("Input second public key (has to be a prime number)");
+            pKeySecond = keyValidation();
+
+            ulong x;
+            ulong pFirst;
+            ulong pSecond;
+            Console.WriteLine("Input first secret key (has to be a prime number)");
+            String p1 = Console.ReadLine();
+
+            while (!ulong.TryParse(p1, out x))
             {
-                Console.WriteLine("Input first public key (has to be a prime number)");
-                pKeyFirst = keyValidation();
-                Console.WriteLine("Input second public key (has to be a prime number)");
-                pKeySecond = keyValidation();
+                Console.WriteLine("Not a valid number, try again.");
+                p1 = Console.ReadLine();
+            }
 
-                int x;
-                Console.WriteLine("Input first secret key (has to be a prime number)");
-                String p1 = Console.ReadLine();
+            Console.WriteLine("Input second secret key (has to be a prime number)");
+            String p2 = Console.ReadLine();
 
-                while (!Int32.TryParse(p1, out x))
-                {
-                    Console.WriteLine("Not a valid number, try again.");
-                    p1 = Console.ReadLine();
-                }
+            while (!ulong.TryParse(p2, out x))
+            {
+                Console.WriteLine("Not a valid number, try again.");
+                p2 = Console.ReadLine();
+            }
 
-                Console.WriteLine("Input second secret key (has to be a prime number)");
-                String p2 = Console.ReadLine();
+            pFirst = Convert.ToUInt64(p1);
+            pSecond = Convert.ToUInt64(p2);
 
-                while (!Int32.TryParse(p2, out x))
-                {
-                    Console.WriteLine("Not a valid number, try again.");
-                    p2 = Console.ReadLine();
-                }
-
-                pSecretFirst = keyGenerator(pKeyFirst, Convert.ToInt32(p1), pKeySecond);
-                pSecretSecond = keyGenerator(pKeyFirst, Convert.ToInt32(p2), pKeySecond);
-
-                Console.WriteLine("First common key is - " +
-                                  keyGenerator(pSecretSecond, Convert.ToInt32(p1), pKeySecond));
-                Console.WriteLine("Second common key is - " +
-                                  keyGenerator(pSecretFirst, Convert.ToInt32(p2), pKeySecond));
-                con = Console.ReadLine();
-            } while (con != "q");
+            pSecretFirst = keyGenerator(pKeyFirst, pFirst, pKeySecond);
+            pSecretSecond = keyGenerator(pKeyFirst, pSecond, pKeySecond);
+            Console.WriteLine("First common key is - " +
+                              keyGenerator(pSecretSecond, pFirst, pKeySecond));
+            Console.WriteLine("Second common key is - " +
+                              keyGenerator(pSecretFirst, pSecond, pKeySecond));
         }
     }
 }
