@@ -83,12 +83,17 @@ namespace MenuSystem
                 if (menuItem.Title != null && command != MenuCommandReturnToMain &&
                     command != MenuCommandExit)
                 {
-                    if (_menuLevel == 0 && menuItem.Reverse == false)
-                        Vigenere();
                     switch (_menuLevel)
                     {
                         case 1:
                             Caesar(menuItem.Encrypt);
+                            break;
+                        case 2:
+                            Vigenere();
+                            break;
+                        case 3:
+                            KeyExchange keys = new KeyExchange();
+                            keys.keyExchange();
                             break;
                     }
                     

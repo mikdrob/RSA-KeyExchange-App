@@ -22,6 +22,36 @@ namespace Console_application
         {
             
             Console.Clear();
+            var keyExchange = new Menu(3)
+            {
+                Title = "Choose action",
+                MenuItemsDictionary = new Dictionary<string, MenuItem>()
+                {
+                    {
+                        "1", new MenuItem()
+                        {
+                            Title = "Diffie-Hellman key exchange",
+                            CommandToExecute = null
+                        }
+                    },
+                }
+            };
+            
+            var vigenere = new Menu(2)
+            {
+                Title = "Choose action",
+                MenuItemsDictionary = new Dictionary<string, MenuItem>()
+                {
+                    {
+                        "1", new MenuItem()
+                        {
+                            Title = "Vigenere encryption/decryption",
+                            CommandToExecute = null
+                        }
+                    },
+                }
+            };
+            
             var caesar = new Menu(1)
             {
                 Title = "Choose action",
@@ -64,10 +94,16 @@ namespace Console_application
                         "2", new MenuItem()
                         {
                             Title = "Vigenere",
-                            Reverse = false,
-                            CommandToExecute = null
+                            CommandToExecute = vigenere.Run
                         }
                     },
+                    {
+                        "3", new MenuItem()
+                        {
+                            Title = "Key exchange",
+                            CommandToExecute = keyExchange.Run
+                        }
+                    }
 
                 }
             };
