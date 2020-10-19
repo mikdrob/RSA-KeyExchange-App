@@ -95,6 +95,12 @@ namespace MenuSystem
                             KeyExchange keys = new KeyExchange();
                             keys.keyExchange();
                             break;
+                        case 4:
+                            RSA.RsaBruteforce();
+                            break;
+                        case 5:
+                            RSA.RsaImplemantation(menuItem.Title);
+                            break;
                     }
                     
                 }

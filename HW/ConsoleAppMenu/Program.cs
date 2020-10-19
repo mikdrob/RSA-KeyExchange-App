@@ -11,6 +11,7 @@ namespace Console_application
         static void Main(string[] args)
         {
             Encryption();
+            
         }
         
         
@@ -20,8 +21,52 @@ namespace Console_application
 
         static void Encryption()
         {
+            var rsaOption = new Menu(5)
+            {
+                Title = "Choose action",
+                MenuItemsDictionary = new Dictionary<string, MenuItem>()
+                {
+                    {
+                        "1", new MenuItem()
+                        {
+                            Title = "Encrypt",
+                            CommandToExecute = null
+                        }
+                    },
+                    {
+                        "2", new MenuItem()
+                        {
+                            Title = "Decrypt",
+                            CommandToExecute = null
+                        }
+                    },
+                }
+            };
             
             Console.Clear();
+            
+            var rsa = new Menu(4)
+            {
+                Title = "Choose action",
+                MenuItemsDictionary = new Dictionary<string, MenuItem>()
+                {
+                    {
+                        "1", new MenuItem()
+                        {
+                            Title = "RSA",
+                            CommandToExecute = rsaOption.Run
+                        }
+                    },
+                    {
+                        "2", new MenuItem()
+                        {
+                            Title = "RSA bruteforce",
+                            CommandToExecute = null
+                        }
+                    },
+                }
+            };
+
             var keyExchange = new Menu(3)
             {
                 Title = "Choose action",
@@ -102,6 +147,13 @@ namespace Console_application
                         {
                             Title = "Key exchange",
                             CommandToExecute = keyExchange.Run
+                        }
+                    },
+                    {
+                        "4", new MenuItem()
+                        {
+                            Title = "RSA",
+                            CommandToExecute = rsa.Run
                         }
                     }
 

@@ -2,43 +2,15 @@ using System;
 
 namespace MenuSystem
 {
-    public class KeyExchange
+    public class KeyExchange : Validation
     {
-        private ulong pKeyFirst;
-        private ulong pKeySecond;
-        private ulong pSecretFirst;
-        private ulong pSecretSecond;
-        
+        private ulong _pKeyFirst;
+        private ulong _pKeySecond;
+        private ulong _pSecretFirst;
+        private ulong _pSecretSecond;
 
-        static ulong keyValidation()
-        {
-            ulong tKey = 0;
-            var inputKey = "";
-            bool wrongInput = false;
-            do
-            {
-                if (wrongInput)
-                    Console.WriteLine("Try again");
-                inputKey = Console.ReadLine();
-                if (ulong.TryParse(inputKey, out tKey))
-                    wrongInput = primesValidation(tKey);
-            } while (wrongInput);
-            return tKey;
-        }
 
-        static bool primesValidation(ulong inputKey)
-        {
-            if (inputKey < 2)
-                return true;
-            for (ulong i = inputKey/2; i > 1; i--)
-            {
-                if (inputKey % i == 0)
-                    return true;
-            }
-            return false;
-        }
-        
-        static ulong keyGenerator(ulong publicKeyA, ulong secretPart, ulong publicKeyB)
+        static ulong KeyGenerator(ulong publicKeyA, ulong secretPart, ulong publicKeyB)
         {
             
             ulong powerOfKeyValue = 1;
@@ -69,9 +41,9 @@ namespace MenuSystem
         public void keyExchange()
         {
             Console.WriteLine("Input first public key (has to be a prime number)");
-            pKeyFirst = keyValidation();
+            _pKeyFirst = KeyValidation();
             Console.WriteLine("Input second public key (has to be a prime number)");
-            pKeySecond = keyValidation();
+            _pKeySecond = KeyValidation();
 
             ulong x;
             ulong pFirst;
@@ -97,12 +69,12 @@ namespace MenuSystem
             pFirst = Convert.ToUInt64(p1);
             pSecond = Convert.ToUInt64(p2);
 
-            pSecretFirst = keyGenerator(pKeyFirst, pFirst, pKeySecond);
-            pSecretSecond = keyGenerator(pKeyFirst, pSecond, pKeySecond);
+            _pSecretFirst = KeyGenerator(_pKeyFirst, pFirst, _pKeySecond);
+            _pSecretSecond = KeyGenerator(_pKeyFirst, pSecond, _pKeySecond);
             Console.WriteLine("First common key is - " +
-                              keyGenerator(pSecretSecond, pFirst, pKeySecond));
+                              KeyGenerator(_pSecretSecond, pFirst, _pKeySecond));
             Console.WriteLine("Second common key is - " +
-                              keyGenerator(pSecretFirst, pSecond, pKeySecond));
+                              KeyGenerator(_pSecretFirst, pSecond, _pKeySecond));
         }
     }
 }
