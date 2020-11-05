@@ -1,0 +1,86 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/WebApp.csproj",
+    "projectName": "WebApp",
+    "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/WebApp.csproj",
+    "outputPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/obj/",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {
+          "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj": {
+            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj"
+          },
+          "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj": {
+            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[3.1.7, )"
+        },
+        "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[3.1.7, )"
+        },
+        "Microsoft.AspNetCore.Identity.UI": {
+          "target": "Package",
+          "version": "[3.1.7, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "[3.1.9, )"
+        },
+        "Microsoft.EntityFrameworkCore.Sqlite": {
+          "target": "Package",
+          "version": "[3.1.7, )"
+        },
+        "Microsoft.EntityFrameworkCore.Tools": {
+          "target": "Package",
+          "version": "[3.1.7, )"
+        },
+        "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[3.1.4, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.AspNetCore.App": {
+          "privateAssets": "none"
+        },
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
+    }
+  }
+}

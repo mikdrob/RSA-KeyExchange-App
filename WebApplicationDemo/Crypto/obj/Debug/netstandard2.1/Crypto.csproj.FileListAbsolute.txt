@@ -1,0 +1,12 @@
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/bin/Debug/netstandard2.1/Crypto.deps.json
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/bin/Debug/netstandard2.1/Crypto.dll
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/bin/Debug/netstandard2.1/Crypto.pdb
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.csprojAssemblyReference.cache
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.AssemblyInfoInputs.cache
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.AssemblyInfo.cs
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.csproj.CoreCompileInputs.cache
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.dll
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.pdb
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/bin/Debug/netstandard2.1/Domain.dll
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/bin/Debug/netstandard2.1/Domain.pdb
+/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/Debug/netstandard2.1/Crypto.csproj.CopyComplete
