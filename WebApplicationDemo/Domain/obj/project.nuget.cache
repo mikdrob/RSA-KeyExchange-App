@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6LIfEud3DsRFDH4PphtE8anpPsG5JC85NcD7OTXpJnDNLS9DfwHAjSy6Etf4My5oIHiNpmj4cQObXrSuEmMCLQ==",
+  "dgSpecHash": "t5l2osjGfHIpvkHHPcfHo4hiY4XCLZ4MZgIgQZU5vpJ/b75ztPyBrwv9/9tvXPO5s/8pZzQgsPjoMlfATlGBmg==",
   "success": true,
-  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj",
+  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

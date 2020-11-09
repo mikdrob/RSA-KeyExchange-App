@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/WebApp.csproj",
+    "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/WebApp.csproj",
     "projectName": "WebApp",
-    "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/WebApp.csproj",
-    "outputPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/obj/",
+    "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/WebApp.csproj",
+    "outputPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -15,11 +15,11 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj": {
-            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj"
+          "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/Crypto.csproj": {
+            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/Crypto.csproj"
           },
-          "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj": {
-            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj"
+          "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj": {
+            "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj"
           }
         }
       }

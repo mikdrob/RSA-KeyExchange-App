@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1QkiNCwfTNj1bkgzCMjMcj5cBKUBjK2kY0fVwX5hs4ADfhhHA385OqcKwATueaN5E21k6CJ49MH7dMSpZBd1oQ==",
+  "dgSpecHash": "M9p2zCxrhu4OxfiwaHfjrC5kGx6m0e9/jbTR7N17Prtwbq4WWFB2N0a6UAN10NYhEbugbA3yopXgiZ/nX4KiTQ==",
   "success": true,
-  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
+  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

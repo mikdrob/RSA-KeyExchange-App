@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj",
+      "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/Crypto.csproj",
       "projectName": "Crypto",
-      "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj",
+      "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/Crypto.csproj",
       "packagesPath": "/Users/mikhaildrobyshev/.nuget/packages/",
-      "outputPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/obj/",
+      "outputPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mikhaildrobyshev/.nuget/NuGet/NuGet.Config"
@@ -50,8 +50,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj": {
-              "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj"
+            "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj": {
+              "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "71pcgWBvQuQaoe2mfaPJYR1g0+W8xsQX3MG1QhCtURhV+/2qKOc890FOLeHVCXmLf2b0wTcXEmGW4EuLzVFCgw==",
+  "dgSpecHash": "PZdpOGp5/q+YSoJUBXX2+y5QeCnk6W3gz4GqMV2U83zXY3qq18xlSncoBL30haK9yIUAaNt0sgv7I5cHciaU5w==",
   "success": true,
-  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/WebApp/WebApp.csproj",
+  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/WebApp.csproj",
   "expectedPackageFiles": [
     "/Users/mikhaildrobyshev/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.7/microsoft.aspnetcore.cryptography.internal.3.1.7.nupkg.sha512",
     "/Users/mikhaildrobyshev/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.7/microsoft.aspnetcore.cryptography.keyderivation.3.1.7.nupkg.sha512",

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj",
+      "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/Domain.csproj",
+      "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj",
       "packagesPath": "/Users/mikhaildrobyshev/.nuget/packages/",
-      "outputPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Domain/obj/",
+      "outputPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mikhaildrobyshev/.nuget/NuGet/NuGet.Config"

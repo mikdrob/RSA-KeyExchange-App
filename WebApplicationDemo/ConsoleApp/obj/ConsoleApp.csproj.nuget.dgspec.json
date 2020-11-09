@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj": {}
+    "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj": {}
   },
   "projects": {
-    "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj": {
+    "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
+        "projectUniqueName": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
+        "projectPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/ConsoleApp.csproj",
         "packagesPath": "/Users/mikhaildrobyshev/.nuget/packages/",
-        "outputPath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/ConsoleApp/obj/",
+        "outputPath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/ConsoleApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mikhaildrobyshev/.nuget/NuGet/NuGet.Config"

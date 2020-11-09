@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rFWAbgjFyCe6P5Oq7f8nZuFzmTCYGFpNfhQJ6Mc3t0NDTIo4njovBeovfPZR+8J4UyXBY+D0ztAp3lnUbGxsrg==",
+  "dgSpecHash": "5qjyO7bOYxpuvFIBK1/Unm/tJ5e6Eyk9NlamEbVhPaW63IwFg3wCzCID0RXgAdZB3pKT7EM1E1EVoo6MIgxcLA==",
   "success": true,
-  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/WebApplicationDemo/Crypto/Crypto.csproj",
+  "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Crypto/Crypto.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

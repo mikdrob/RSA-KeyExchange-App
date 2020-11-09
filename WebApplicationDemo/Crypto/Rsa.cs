@@ -17,40 +17,20 @@ namespace Crypto
             rsa.KeyLength = Convert.ToBase64String(Encoding.Default.GetBytes(keyLength.ToString()));
             var m = (rsa.PPrime - 1) * (rsa.QPrime - 1);
             
-            
             int messageRsa = keyLength > Int32.MaxValue ? rdn.Next(2, Int32.MaxValue) : rdn.Next(2, (int)keyLength);
             rsa.Exponent = Coprime(m);
 
-
             keySecret = ModularInverse(m, rsa.Exponent);
-            
             rsa.KeySecret = Convert.ToBase64String(Encoding.Default.GetBytes(keySecret.ToString()));
-            
             
             var passWCypher = Encoding.Default.GetBytes(modPow((ulong)messageRsa, rsa.Exponent, keyLength).ToString());
             rsa.RsaCypher = Convert.ToBase64String(passWCypher);
 
             var messageLength = Encoding.Default.GetBytes(rsa.Message).Length*8;
             var symmKeyLength = messageLength < 32 ? 32 : roundUpToNextPowerOfTwo(messageLength);
-            
-
             var symmKey = KeyGenerator.CreateKey(messageRsa.ToString(), symmKeyLength);
             
-            
-            // Console.WriteLine(Convert.ToBase64String(symmKey) + " symmkey");
-            //
-            // var cyp = KeyGenerator.messageEncrypt(rsa.Message, symmKey);
-            //
-            // ulong dirivedRsaKey = modPow(passWCypher, rsa.KeySecret, keyLength);
-            //
-            // symmKey = KeyGenerator.CreateKey(messageRsa.ToString(), roundUpToNextPowerOfTwo(Encoding.Default.GetBytes(cyp).Length >> 1));
-            // Console.WriteLine(Convert.ToBase64String(symmKey) + " symmkeyDectyption");
-            Console.WriteLine(symmKey.Length + " symmkey length");
-            Console.WriteLine(rsa.Message.Length + " message length");
-            Console.WriteLine(KeyGenerator.messageEncrypt(Encoding.Default.GetBytes(rsa.Message), symmKey).Length + " cypher length");
-            
             rsa.Cypher = KeyGenerator.messageEncrypt(Encoding.Default.GetBytes(rsa.Message), symmKey);
-            
         }
 
         public static void RsaDecrypt(RsaKey rsa)
@@ -66,15 +46,11 @@ namespace Crypto
             {
                 dirivedMessage = modPow(rsaCypher, keySecret, keyLength);
             }
-            
 
             var symmKeyLength = Convert.FromBase64String(rsa.Cypher).Length;
-            Console.WriteLine(symmKeyLength + " symmkey len dec func");
-            Console.WriteLine(dirivedMessage.ToString() + " message dec func");
             var symmKey = KeyGenerator.CreateKey(dirivedMessage.ToString(), symmKeyLength);
 
             rsa.Message = KeyGenerator.messageDecrypt(cypherText, symmKey);
         }
-        
     }
 }
