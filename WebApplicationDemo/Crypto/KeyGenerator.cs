@@ -53,8 +53,6 @@ namespace Crypto
 
         public static string messageEncrypt(byte[] messageBytes, byte[] passWBytes)
         {
-            displayBytes(messageBytes);
-            displayBytes(passWBytes);
             var result = new byte[passWBytes.Length];
             Console.WriteLine(messageBytes.Length + " " + passWBytes.Length);
             int cypher = 0;
@@ -90,15 +88,5 @@ namespace Crypto
             
             return Encoding.Default.GetString(result);
         }
-
-      private static void displayBytes(byte[] messages)
-      {
-          for (int i = 0; i < messages.Length; i++)
-          {
-              Console.Write(messages[i] + " ");
-          }
-          Console.WriteLine();
-          Console.WriteLine("--------------------------------------------------------------------------------------------");
-      }
     }
 }

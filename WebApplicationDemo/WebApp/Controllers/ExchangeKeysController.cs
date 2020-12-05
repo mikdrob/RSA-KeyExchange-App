@@ -54,10 +54,11 @@ namespace WebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,P,G,ASecret,BSecret,CommonSecret")] ExchangeKey exchangeKey)
+        public async Task<IActionResult> Create(ExchangeKey exchangeKey)
         {
             if (ModelState.IsValid)
             {
+                Crypto.KeyExchange.KeyExchangeImplementation(exchangeKey);
                 _context.Add(exchangeKey);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

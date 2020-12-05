@@ -110,7 +110,7 @@ namespace WebApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Message,Cypher,KeyLength,PPrime,QPrime,Exponent,KeySecret")] RsaKey rsaKey)
+        public async Task<IActionResult> Edit(int id, RsaKey rsaKey)
         {
             if (id != rsaKey.Id)
             {
@@ -121,6 +121,7 @@ namespace WebApp.Controllers
             {
                 try
                 {
+                    Crypto.Rsa.RsaImplemantation(rsaKey);
                     _context.Update(rsaKey);
                     await _context.SaveChangesAsync();
                 }
