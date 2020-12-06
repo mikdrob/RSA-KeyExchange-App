@@ -9,7 +9,7 @@ using WebApp.Data;
 namespace WebApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201103104447_InitialDbCreation")]
+    [Migration("20201206164540_InitialDbCreation")]
     partial class InitialDbCreation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,12 @@ namespace WebApp.Migrations
                     b.Property<ulong>("P")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("ExchangeKeys");
                 });
@@ -56,11 +61,11 @@ namespace WebApp.Migrations
                     b.Property<ulong>("Exponent")
                         .HasColumnType("INTEGER");
 
-                    b.Property<ulong>("KeyLength")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("KeyLength")
+                        .HasColumnType("TEXT");
 
-                    b.Property<ulong>("KeySecret")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("KeySecret")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Message")
                         .HasColumnType("TEXT");
@@ -71,10 +76,15 @@ namespace WebApp.Migrations
                     b.Property<ulong>("QPrime")
                         .HasColumnType("INTEGER");
 
-                    b.Property<ulong>("RsaCypher")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("RsaCypher")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("RsaKeys");
                 });
@@ -273,6 +283,20 @@ namespace WebApp.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("Domain.ExchangeKey", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Domain.RsaKey", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

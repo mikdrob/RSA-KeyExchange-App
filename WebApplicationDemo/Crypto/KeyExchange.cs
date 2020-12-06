@@ -1,19 +1,23 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using Domain;
 
 namespace Crypto
 {
     public class KeyExchange
     {
-        public static void Validation(String p, ulong x = 0)
+        public static bool PrimesValidation(ulong prime)
         {
-            while (!ulong.TryParse(p, out x))
+            if (prime < 2)
+                return false;
+            for (ulong i = prime/2; i > 1; i--)
             {
-                Console.WriteLine("Not a valid number, try again.");
-                p = Console.ReadLine();
+                if (prime % i == 0)
+                    return false;
             }
+            return true;
         }
-        
+
         static ulong KeyGenerator(ulong publicKeyA, ulong secretPart, ulong publicKeyB)
         {
             

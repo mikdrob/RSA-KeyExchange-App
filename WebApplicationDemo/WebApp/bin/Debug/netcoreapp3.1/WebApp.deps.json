@@ -2538,6 +2538,9 @@
         }
       },
       "Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Stores": "3.1.7"
+        },
         "runtime": {
           "Domain.dll": {}
         },

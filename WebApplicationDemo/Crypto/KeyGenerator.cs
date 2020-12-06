@@ -54,7 +54,6 @@ namespace Crypto
         public static string messageEncrypt(byte[] messageBytes, byte[] passWBytes)
         {
             var result = new byte[passWBytes.Length];
-            Console.WriteLine(messageBytes.Length + " " + passWBytes.Length);
             int cypher = 0;
             for (int i = 0; i < messageBytes.Length; i++)
             {

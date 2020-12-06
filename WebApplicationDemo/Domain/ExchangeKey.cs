@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Domain
 {
     public class ExchangeKey
@@ -8,5 +10,7 @@ namespace Domain
         public ulong ASecret { get; set; }
         public ulong BSecret { get; set; }
         public ulong CommonSecret { get; set; }
+        public string UserId { get; set; }
+        public IdentityUser User { get; set; }
     }
 }

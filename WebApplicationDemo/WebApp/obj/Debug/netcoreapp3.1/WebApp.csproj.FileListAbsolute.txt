@@ -202,7 +202,6 @@
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/appsettings.json
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/WebApp.StaticWebAssets.xml
-/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/app.db
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/WebApp.deps.json
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.json
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.dev.json
@@ -398,3 +397,4 @@
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/obj/Debug/netcoreapp3.1/WebApp.dll
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/obj/Debug/netcoreapp3.1/WebApp.pdb
 /Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/obj/Debug/netcoreapp3.1/WebApp.genruntimeconfig.cache
+/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/WebApp/bin/Debug/netcoreapp3.1/app.db

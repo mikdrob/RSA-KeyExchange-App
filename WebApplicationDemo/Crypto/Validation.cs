@@ -58,6 +58,5 @@ namespace Crypto
             v++;
             return v;
         }
-        
     }
 }

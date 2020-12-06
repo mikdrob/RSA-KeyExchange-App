@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity;
 
 namespace Domain
 {
@@ -14,5 +15,8 @@ namespace Domain
         
         public string RsaCypher { get; set; }
         public string KeySecret { get; set; }
+        
+        public string UserId { get; set; }
+        public IdentityUser User { get; set; }
     }
 }

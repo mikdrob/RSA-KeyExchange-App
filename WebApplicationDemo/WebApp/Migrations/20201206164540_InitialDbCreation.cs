@@ -47,43 +47,6 @@ namespace WebApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ExchangeKeys",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    P = table.Column<ulong>(nullable: false),
-                    G = table.Column<ulong>(nullable: false),
-                    ASecret = table.Column<ulong>(nullable: false),
-                    BSecret = table.Column<ulong>(nullable: false),
-                    CommonSecret = table.Column<ulong>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ExchangeKeys", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RsaKeys",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Message = table.Column<string>(nullable: true),
-                    Cypher = table.Column<string>(nullable: true),
-                    KeyLength = table.Column<ulong>(nullable: false),
-                    PPrime = table.Column<ulong>(nullable: false),
-                    QPrime = table.Column<ulong>(nullable: false),
-                    Exponent = table.Column<ulong>(nullable: false),
-                    RsaCypher = table.Column<ulong>(nullable: false),
-                    KeySecret = table.Column<ulong>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RsaKeys", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -189,6 +152,57 @@ namespace WebApp.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ExchangeKeys",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    P = table.Column<ulong>(nullable: false),
+                    G = table.Column<ulong>(nullable: false),
+                    ASecret = table.Column<ulong>(nullable: false),
+                    BSecret = table.Column<ulong>(nullable: false),
+                    CommonSecret = table.Column<ulong>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ExchangeKeys", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ExchangeKeys_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RsaKeys",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Message = table.Column<string>(nullable: true),
+                    Cypher = table.Column<string>(nullable: true),
+                    KeyLength = table.Column<string>(nullable: true),
+                    PPrime = table.Column<ulong>(nullable: false),
+                    QPrime = table.Column<ulong>(nullable: false),
+                    Exponent = table.Column<ulong>(nullable: false),
+                    RsaCypher = table.Column<string>(nullable: true),
+                    KeySecret = table.Column<string>(nullable: true),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RsaKeys", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RsaKeys_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -225,6 +239,16 @@ namespace WebApp.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ExchangeKeys_UserId",
+                table: "ExchangeKeys",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RsaKeys_UserId",
+                table: "RsaKeys",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

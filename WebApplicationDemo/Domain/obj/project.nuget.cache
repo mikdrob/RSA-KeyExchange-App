@@ -1,8 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "t5l2osjGfHIpvkHHPcfHo4hiY4XCLZ4MZgIgQZU5vpJ/b75ztPyBrwv9/9tvXPO5s/8pZzQgsPjoMlfATlGBmg==",
+  "dgSpecHash": "QWYCIDDgDY8mz9lKvgJq0S2of/NCY15JZnBQsQjRWm6XDLWa1nrnsUZrVcXj+cAGXKgLyhjTFXRgILefETlSnA==",
   "success": true,
   "projectFilePath": "/Users/mikhaildrobyshev/RiderProjects/gitpush/ics0031-2020f/WebApplicationDemo/Domain/Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.7/microsoft.aspnetcore.cryptography.internal.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.7/microsoft.aspnetcore.cryptography.keyderivation.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.caching.abstractions/3.1.7/microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.configuration/3.1.7/microsoft.extensions.configuration.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.7/microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.configuration.binder/3.1.7/microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.dependencyinjection/3.1.7/microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/3.1.7/microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.identity.core/3.1.7/microsoft.extensions.identity.core.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.identity.stores/3.1.7/microsoft.extensions.identity.stores.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.logging/3.1.7/microsoft.extensions.logging.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.7/microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.options/3.1.7/microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/microsoft.extensions.primitives/3.1.7/microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/system.memory/4.5.2/system.memory.4.5.2.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/system.numerics.vectors/4.4.0/system.numerics.vectors.4.4.0.nupkg.sha512",
+    "/Users/mikhaildrobyshev/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
